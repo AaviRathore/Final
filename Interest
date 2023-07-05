@@ -1,0 +1,34 @@
+[200~class Interest 
+    
+        attr_accessor :_principle  
+	    attr_accessor :_time
+	        
+		    def compound(principle, time , rate = 0.08  )
+		            
+			            puts "**Compound Interest Calculation**"
+				            @amount = principle*((1+ rate)** time)
+					            puts "Amount : #{@amount.to_i}"
+						            @interest = @amount - principle
+							            puts "Inerest:#{@interest.to_i}"
+								            
+									        end 
+										      
+										             
+											           def simple(principle , time  , rate =0.08 )
+												             puts "**Simple Interest Calculation**"
+													               @interest = principle * rate  * time 
+														                 @amount = principle + @interest
+																           puts "Amount : #{@amount.to_i}"
+																	             puts "Interest: #{@interest.to_i} "
+																		           end 
+																			       
+																			           
+																				       
+																				           
+																					       
+																					         end 
+
+																						 interest = Interest.new 
+
+																						 interest.compound(1000, 2)
+																						 interest.simple(1000, 2 )
